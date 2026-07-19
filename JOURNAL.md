@@ -15,3 +15,26 @@ The `resume parser` is expected to parse section headers in resume. However, bec
 **Setup confirmation:** [x] App runs locally at localhost:5173
 
 **Cohort ledger:** [x] Issue added to cohort ledger
+
+
+## Week 8 — Reproduction & solution planning
+
+**Reproduction commit link:** [link to commit documenting the reproduced issue](https://github.com/AhnafAhmed13/pathreview/commit/2f7d407fc48626eb757a8b3f590c5c8013df32e0)
+
+**Reproduction summary:**
+
+Created a `test.py` file and used the following code:
+```py
+from ingestion.parsers.resume_parser import ResumeParser
+r = ResumeParser()
+res = r.parse('\n    John Smith\n    john@example.com\n\n    Education:\n    - B.S. Computer Science\n\n    Skills: Python\n')
+print(res.metadata['detected_sections'])
+# observed: []  (expected: Education, Skills)
+```
+
+**PLAN.md link:** [link to PLAN.md in your fork](https://github.com/AhnafAhmed13/pathreview/blob/fix/147-resume-section-whitespace/PLAN.md)
+
+**Walkthrough video (recommended):** [link to your Loom video, ≤2 min — shared for early feedback]
+
+**Blockers or open questions:**
+[Anything you're still uncertain about going into Week 9, or leave blank]
