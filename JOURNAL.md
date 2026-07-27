@@ -64,3 +64,37 @@ Create pull request
 
 **Blockers:**
 [Anything slowing you down? Or leave blank.]
+
+---
+
+### Check-in 2 (end of week)
+
+**PR link:** [fix: resume section detection on text with leading whitespace/indentation
+](https://github.com/ascherj/pathreview/pull/311)
+
+**Branch:** `fix/147-resume-section-whitespace`
+
+**What you built:**
+My fix adds leading whitespace/indentation detection for resume sections by prepending `[ \t]*` to each pattern in `resume_parser.py`
+
+**Tests added or updated:**
+I added `test_parse_section_with_whitespace` unit-test in `tests/unit/test_resume_parser.py`.
+It tests if the parser can detect sections on texts with leading whitespace/indentation.
+
+**Self-review confirmation:** [x] make check passes  [x] make test-unit passes
+
+Before my changes:
+
+- make check: Found 186 errors.
+- make test-unit: 53 failed, 375 passed, 1 warning
+
+After my changes:
+
+- make check: Found 186 errors.
+- make test-unit: 50 failed, 379 passed, 1 warning
+
+make check: equal errors
+make test-unit: failed 53 -> 50, passed 375 -> 379
+3 exsiting failing tests `test_parse_single_column_resume_text`, `test_parse_resume_no_work_experience`, `test_detect_sections` + 1 new test `test_parse_section_with_whitespace` passed
+
+**Draft PR feedback received from:** [name or Slack handle, or "none"]
