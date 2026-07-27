@@ -38,3 +38,29 @@ print(res.metadata['detected_sections'])
 
 **Blockers or open questions:**
 [Anything you're still uncertain about going into Week 9, or leave blank]
+
+
+## Week 9 — Solution building & PR submission
+
+### Check-in 1 (mid-week)
+
+**Current progress:**
+I have implemented the following code in `resume_parser.py`
+```py
+patterns = [
+                rf"^[ \t]*{re.escape(section)}\s*$",
+                rf"^[ \t]*{re.escape(section)}\s*[:|-]",
+                rf"\n[ \t]*{re.escape(section)}\s*$",
+                rf"\n[ \t]*{re.escape(section)}\s*[:|-]",
+            ]
+```
+This extends the regex patterns in `resume_parser.py` to include leading whitespaces/indentations.
+
+I have added `test_parse_section_with_whitespace` test in `test_resume_parser.py` to validate fix.
+
+
+**Next steps:**
+Create pull request
+
+**Blockers:**
+[Anything slowing you down? Or leave blank.]
