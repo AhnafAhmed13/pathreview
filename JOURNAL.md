@@ -97,4 +97,35 @@ make check: equal errors
 make test-unit: failed 53 -> 50, passed 375 -> 379
 3 exsiting failing tests `test_parse_single_column_resume_text`, `test_parse_resume_no_work_experience`, `test_detect_sections` + 1 new test `test_parse_section_with_whitespace` passed
 
-**Draft PR feedback received from:** [name or Slack handle, or "none"]
+**Draft PR feedback received from:** "none"
+
+
+## Week 10 — Iteration & reflection
+
+### Reviewer feedback
+
+**Feedback received:** [ ] Yes  [x] No — still awaiting review
+
+**Summary of feedback:**
+No review came in.
+
+**How you responded:**
+
+---
+
+### Reflection
+
+**What was harder than you expected?**
+I was surprised by the initial issue selection process where most of the issues were already fixed. And the first issue I selected was taken down. So, I had to select a different issue.
+
+**What did you learn about working in a large codebase?**
+Main difference is reading and understanding vs planning and writing. Contributing to someone else's production code requires reading and understanding their patterns and design decisions. Building your own project requires planning and making your own decisions.
+
+**How did AI tools help — and where did they fall short?**
+I used AI to set up my local environment, explore the codebase, and understand the project structure. It also helped me plan my solution and write tests. I didn't need to use AI to reproduce the bug since the steps were and included in the issue description.
+
+**What would you do differently if you started over?**
+I would select a higher-tier problem since I'm more confident in solving an issue after finishing this cycle.
+
+**What are you most proud of from this module?**
+Understanding the process and finding details in places such as CONTRIBUTING.md and README files.
